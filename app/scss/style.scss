@@ -12,7 +12,166 @@ html{
     padding: 0;
 }
 body{
+    font-family: 'Open Sans', sans-serif;
+    color: $VeryDarkCyan;
+    h1, h2, h3, h4{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+    main{
+        margin: 5.5vw 4.5vw;
 
+        header{
+            display: flex;
+            justify-content: space-between;
+            .logo{
+                margin-left: 10px;
+                background-image: url(../../images/logo.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 240px;
+                height: 39px;
+            }
+            .cta{
+                border: solid 2px $Pink;
+                padding: 8px 30px;
+                border-radius: 20px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+                a{
+                    text-decoration: none;
+                    line-height: 1;
+                    color: $Pink;
+                }
+            }
+        }
+        .hero{
+            text-align: center;
+            margin-top: 15.5vw;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            h1{
+                font-size: 48px;
+                color: $VeryDarkCyan;
+            }
+            p{
+                display: block;
+                margin-top: 25px;
+                max-width: 620px;
+                line-height: 1.5;
+
+                color: $VeryDarkCyan;
+                font-size: 20px;
+            }
+            .cta{
+                background-color: $Pink;
+                padding: 28px;
+                width: 400px;
+                border-radius: 40px;
+                margin-top: 42px;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                transition: opacity 200ms linear;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.6;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 19px;
+                    font-weight: 700;
+                }
+            }
+            .hero_image{
+
+                width: 100%;
+                height: 52vw;
+                background-image: url(../../images/screen-mockups.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                margin-top: 110px;
+            }
+        }
+        .stats{
+
+            display: flex;
+            justify-content: center;
+            gap: 335px;
+            margin-top: 110px;
+            .stat{
+                border: solid 1px red;
+                &:nth-child(2){
+                    .stat_icon{
+                        width: 48px;
+                        height: 40px;
+                        background-image: url(../../images/icon-messages.svg);
+                    }
+                }
+                &_icon{
+                    background-image: url(../../images/icon-communities.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    width: 47px;
+                    height: 41px;
+                }
+                h2{
+                    font-size: 95px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                p{
+                    text-align: center;
+                    font-size: 25px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .sections{
+        margin-top: 130px;
+        .section{
+            border: solid 1px red;
+            display: flex;
+            height: 70vw;
+            background-color: $VeryPaleBlue;
+            background-image: url(../../images/bg-section-top-desktop-1.png);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: contain;
+            
+            &_text{
+                border: solid 1px red;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 9vw;
+                padding-right: 5vw;
+                h3{
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                }
+                p{
+
+                }
+            }
+            &_image{
+                border: solid 1px red;
+                width: 50%;
+                background-image: url(../../images/illustration-grow-together.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 70%;
+            }
+
+        }
+    }
+    
 }
 
 //helperClass to hide/show element

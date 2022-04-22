@@ -1,0 +1,226 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #00252e;
+}
+
+body h1, body h2, body h3, body h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+body main {
+  margin: 5.5vw 4.5vw;
+}
+
+body main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main header .logo {
+  margin-left: 10px;
+  background-image: url(../../images/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 240px;
+  height: 39px;
+}
+
+body main header .cta {
+  border: solid 2px #ff52bf;
+  padding: 8px 30px;
+  border-radius: 20px;
+}
+
+body main header .cta:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+body main header .cta a {
+  text-decoration: none;
+  line-height: 1;
+  color: #ff52bf;
+}
+
+body main .hero {
+  text-align: center;
+  margin-top: 15.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .hero h1 {
+  font-size: 48px;
+  color: #00252e;
+}
+
+body main .hero p {
+  display: block;
+  margin-top: 25px;
+  max-width: 620px;
+  line-height: 1.5;
+  color: #00252e;
+  font-size: 20px;
+}
+
+body main .hero .cta {
+  background-color: #ff52bf;
+  padding: 28px;
+  width: 400px;
+  border-radius: 40px;
+  margin-top: 42px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+}
+
+body main .hero .cta:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+body main .hero .cta a {
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+body main .hero .hero_image {
+  width: 100%;
+  height: 52vw;
+  background-image: url(../../images/screen-mockups.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: 110px;
+}
+
+body main .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 335px;
+  margin-top: 110px;
+}
+
+body main .stats .stat {
+  border: solid 1px red;
+}
+
+body main .stats .stat:nth-child(2) .stat_icon {
+  width: 48px;
+  height: 40px;
+  background-image: url(../../images/icon-messages.svg);
+}
+
+body main .stats .stat_icon {
+  background-image: url(../../images/icon-communities.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 47px;
+  height: 41px;
+}
+
+body main .stats .stat h2 {
+  font-size: 95px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body main .stats .stat p {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+body .sections {
+  margin-top: 130px;
+}
+
+body .sections .section {
+  border: solid 1px red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70vw;
+  background-color: #f5faff;
+  background-image: url(../../images/bg-section-top-desktop-1.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+body .sections .section_text {
+  border: solid 1px red;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 9vw;
+  padding-right: 5vw;
+}
+
+body .sections .section_text h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+body .sections .section_image {
+  border: solid 1px red;
+  width: 50%;
+  background-image: url(../../images/illustration-grow-together.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+@media (max-width: 65.5625rem) {
+  .hideForMobile {
+    display: none;
+  }
+}
+
+@media (min-width: 65.625rem) {
+  .hideForDesktop {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
