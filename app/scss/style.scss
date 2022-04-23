@@ -31,11 +31,20 @@ body{
                 background-position: center;
                 width: 240px;
                 height: 39px;
+                @include breakpoint-down(small){
+                    width: 120px;
+                    height: 20px;
+                    background-size: contain;
+                }
             }
             .cta{
                 border: solid 2px $Pink;
                 padding: 8px 30px;
                 border-radius: 20px;
+                @include breakpoint-down(small){
+                    padding: 4px 15px;
+                    font-size: 12px;
+                }
                 &:hover{
                     cursor: pointer;
                     opacity: 0.7;
@@ -57,15 +66,20 @@ body{
             h1{
                 font-size: 48px;
                 color: $VeryDarkCyan;
+                @include breakpoint-down(small){
+                    font-size: 30px;
+                }
             }
             p{
                 display: block;
                 margin-top: 25px;
                 max-width: 620px;
                 line-height: 1.5;
-
                 color: $VeryDarkCyan;
                 font-size: 20px;
+                @include breakpoint-down(small){
+                    font-size: 18px;
+                }
             }
             .cta{
                 background-color: $Pink;
@@ -75,6 +89,10 @@ body{
                 margin-top: 42px;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 transition: opacity 200ms linear;
+                @include breakpoint-down(small){
+                    width: 90%;
+                    padding: 14px;
+                }
                 &:hover{
                     cursor: pointer;
                     opacity: 0.6;
@@ -84,6 +102,9 @@ body{
                     color: white;
                     font-size: 19px;
                     font-weight: 700;
+                    @include breakpoint-down(small){
+                        font-size: 16px;
+                    }
                 }
             }
             .hero_image{
@@ -111,8 +132,16 @@ body{
         background-position: bottom;
         background-size: contain;
         padding-bottom: 300px;
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+        @include breakpoint-down(small){
+            background-image: url(../../images/bg-section-top-mobile-1.svg);
+        }
         .stat{
-
             &:nth-child(2){
                 .stat_icon{
                     width: 48px;
@@ -144,6 +173,9 @@ body{
             &:nth-child(1){
                 background-color: $VeryPaleBlue;
                 height: 37vw;
+                @include breakpoint-down(medium){
+                    min-height: 700px;
+                }
             }
             &:nth-child(2){
                 background-color: white;
@@ -152,6 +184,10 @@ body{
                 flex-direction: row-reverse;
                 height: 68vw;
                 padding-top: 3vw;
+                @include breakpoint-down(small){
+                    height: 300px;
+                    background-image: url(../../images/bg-section-bottom-mobile-1.svg), url(../../images/bg-section-top-mobile-2.svg);
+                }
                 .section_image{
                     background-image: url(../../images/illustration-flowing-conversation.svg);
                 }
@@ -168,6 +204,9 @@ body{
             height: 70vw;
             background-repeat: no-repeat;
             background-size: contain;
+            @include breakpoint-down(small){
+                flex-direction: column;
+            }
             
             &_text{
 
@@ -198,10 +237,126 @@ body{
     }
     .cta_section{
         min-height: 30vh;
-        background-image: url(../../images/bg-section-bottom-desktop-2.svg);
+        background-image: url(../../images/bg-section-bottom-desktop-2.svg), url(../../images/bg-footer-top-desktop.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: top;
+        background-position: top, bottom;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 21vw;
+        padding-bottom: 23.5vw;
+        h3{
+            font-size: 40px;
+            margin-bottom: 35px;
+        }
+        .cta{
+            &:hover{
+                opacity: 0.7;
+                cursor: pointer;
+            }
+            transition: opacity 200ms ease-in-out;
+            background-color: $Pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 100px;
+            border-radius: 45px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            a{
+                text-decoration: none;
+                line-height: 1;
+                color: white;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+    }
+    footer{
+        padding: 120px;
+        padding-top: 120px;
+        background-color: $VeryDarkCyan;
+        color: white;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "A B"
+        "C B"
+        "E B";
+        .logo{
+            grid-area: A;
+            width: 240px;
+            height: 39px;
+            background-image: url(../../images/logo_copy.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .infos{
+            margin-top: 25px;
+            grid-area: C;
+            width: 55%;
+            line-height: 1.4;
+            .location{
+
+            }
+            .telefon{
+                display: flex;
+                margin-top: 30px;
+                gap: 15px;
+            }
+            .mail{
+                display: flex;
+                margin-top: 20px;
+                gap: 15px;
+            }
+        }
+        .social_icons{
+            display: flex;
+            grid-area: E;
+            font-size: 35px;
+            margin-top: 70px;
+            gap: 20px;
+        }
+        .newsletter_form{
+            grid-area: B;
+            margin-left: 20px;
+            h4{
+                font-size: 22px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 15px;
+                width: 67%;
+                line-height: 1.5;
+                font-weight: 600;
+            }
+            .form{
+                margin-top: 40px;
+                display: flex;
+                justify-content: space-between;
+                height: 50px;
+                input{
+                    height: 100%;
+                    width: 62%;
+                    border-radius: 5px;
+                }
+                button{
+                    width: 31%;
+                    height: 100%;
+                    border-radius: 5px;
+                    color: white;
+                    font-weight: 700;
+                    background-color: $Pink;
+                    font-size: 17px;
+                    border: none;
+                }
+            }
+        }
     }
     
 }
